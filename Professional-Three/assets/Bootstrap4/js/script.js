@@ -3,23 +3,18 @@
 /*================== Read More Text ==================*/
 
 $(function () {
-    var showChar = 120;
-    var moretext = "Continue Reading";
-    var lesstext = "Stop Reading";
+    var showChar = 100;
+    var moretext = "Read More...";
+    var lesstext = "Read Less...";
     $('.comments-space').each(function () {
         var content = $(this).html();
         if (content.length > showChar) {
             var show_content = content.substr(0, showChar);
             var hide_content = content.substr(showChar, content.length - showChar);
-            var html = show_content +
-                '<span class="remaining-contents"><span class="">' +
-                hide_content +
-                '</span>' +
+            var html = show_content + '<span class="remaining-contents"><span>' + hide_content + '</span>' +
 
-                '<a href="" class="morelinksss contniue-reading read-style" style="display:block; margin-top:40px">' +
-                moretext +
-                '</a>' + '</span>';;
-
+                '<a href="" class="morelinks read-link-style mt-30" style="display:block;">' + moretext + '</a>'
+                + '</span>';
             $(this).html(html);
         }
     });
@@ -39,17 +34,16 @@ $(function () {
     });
 });
 $(function () {
-    var showChar = 400;
-    var moretext = "Read More &nbsp;";
-    var lesstext = " Less Read &nbsp;";
+    var showChar = 200;
+    var moretext = "  More about us &nbsp; " + '<i class="fas fa-arrow-right"></i>';
+    var lesstext = " Less about us &nbsp;" + '<i class="fas fa-arrow-left"></i>';
     $('.comments-spaces').each(function () {
         var content = $(this).html();
         if (content.length > showChar) {
             var show_content = content.substr(0, showChar);
             var hide_content = content.substr(showChar, content.length - showChar);
             var html = show_content + '<span class="remaining-contents"><span>' + hide_content + '</span>' +
-
-                '<a href="" class="morelinks btn btn-read mt-30" style="margin-left: 31%;;display:block;">' + moretext + '</a>'
+                '<a href="" class="morelinks more-text mt-30 " style="display:block;">' + moretext + '</a>'
                 + '</span>';
             $(this).html(html);
         }
@@ -179,11 +173,11 @@ $(function () {
 $(function () {
     $(window).scroll(function () {
         var scroll = $(window).scrollTop();
-        if (scroll >= 700) {
-            $("nav").addClass("fixed-top sleep nav-bg-color");
+        if (scroll >= 100) {
+            $("#home nav").addClass("fixed-top sleep nav-solid-color");
 
         } else {
-            $("nav").removeClass("fixed-top sleep nav-bg-color");
+            $("#home nav").removeClass("fixed-top sleep nav-solid-color");
 
 
         }
