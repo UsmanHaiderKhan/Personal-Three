@@ -1642,7 +1642,6 @@ button:focus {
     }
 }
 
-
 @media screen and (max-width: 414px) {
     #home .navbar {
         padding: 9px;
