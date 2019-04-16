@@ -114,6 +114,8 @@ html, body {
 
 #home .active .nav-link {
     position: relative;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
 }
 
     #home .active .nav-link::before {
@@ -137,7 +139,7 @@ html, body {
     padding: 24px 17px 24px 17px;
     text-transform: capitalize;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 900;
+    font-weight: 400;
 }
 
 .btn-learn {
